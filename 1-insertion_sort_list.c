@@ -48,15 +48,16 @@ void insertion_sort_list(listint_t **list)
 
 	if (!list)
 		return;
-	for (c = *list; c->next; c = c->next)
+	for (c = *list; c; c = c->next)
 	{
 		s = c;
 		while (s)
 		{
-			if (s->n > s->next->n)
+			if (!s->prev)
+				break;
+			if (s->prev->n > s->n)
 			{
-				swap(s, s->next);
-				s = s->prev;
+				swap(s->prev, s);
 				if (!s->prev)
 					*list = s;
 				print_list(*list);
