@@ -4,7 +4,9 @@
  * _quick_sort - sorts an array of integers in \
  ascending order using the Quick sort algorithm
  * @array: array of numbers
+ * @oarray: array of numbers
  * @size: size of array
+ * @osize: size of array
  * Return: 0
  */
 
@@ -38,6 +40,14 @@ void _quick_sort(int *array, size_t size, int *oarray, size_t osize)
 	_quick_sort(array, s, oarray, osize);
 	_quick_sort(array + s + 1, size - s - 1, oarray, osize);
 }
+
+/**
+ * quick_sort - sorts an array of integers in \
+ ascending order using the Quick sort algorithm
+ * @array: array of numbers
+ * @size: size of array
+ * Return: 0
+ */
 
 void quick_sort(int *array, size_t size)
 {
