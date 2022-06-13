@@ -15,9 +15,7 @@ void _quick_sort(int *array, size_t size, int *oarray, size_t osize)
 	size_t c, s;
 	int x, z;
 
-	if (!array)
-		return;
-	if (size <= 1)
+	if (!array || size <= 1)
 		return;
 	x = array[size - 1];
 	for (c = 0, s = 0; c < (size - 1); c++)
