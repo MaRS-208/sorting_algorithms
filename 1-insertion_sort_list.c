@@ -38,7 +38,7 @@ void swap(listint_t *n1, listint_t *n2)
 /**
  * insertion_sort_list - sorts a doubly linked list of\
  integers in ascending order using the Insertion sort algorithm
- * @list:
+ * @list: list
  * Return: 0
  */
 
