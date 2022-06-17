@@ -20,6 +20,8 @@ void _quick_sort(int *array, size_t size, int *oarray, size_t osize)
 	x = array[size - 1];
 	for (c = 0, s = 0; c < (size - 1); c++)
 	{
+		if (array[c] == x)
+			return;
 		if (array[c] < x)
 		{
 			z = array[c];
